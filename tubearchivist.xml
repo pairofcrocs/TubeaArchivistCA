@@ -87,7 +87,7 @@ https://i.imgur.com/LjsfhKL.png</Description>
   <Config Name="Host Port 1" Target="8000" Default="" Mode="tcp" Description="Container Port: 8000" Type="Port" Display="always" Required="false" Mask="false">8000</Config>
   <Config Name="Youtube" Target="/youtube" Default="/youtube" Mode="rw" Description="Container Path: /youtube" Type="Path" Display="always" Required="false" Mask="false">VIDEO SAVE LOCATION</Config>
   <Config Name="appdata" Target="/cache" Default="/cache" Mode="rw" Description="Container Path: /cache" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/TubeArchivist/</Config>
-  <Config Name="ElasticSearch" Target="ES_URL" Default="" Mode="" Description="Container Variable: ES_URL" Type="Variable" Display="always" Required="false" Mask="false">IP:9200</Config>
+  <Config Name="ElasticSearch" Target="ES_URL" Default="" Mode="" Description="Container Variable: ES_URL" Type="Variable" Display="always" Required="false" Mask="false">http://IP:9200</Config>
   <Config Name="Rejson" Target="REDIS_HOST" Default="" Mode="" Description="Container Variable: REDIS_HOST" Type="Variable" Display="always" Required="false" Mask="false">IP</Config>
   <Config Name="UID" Target="HOST_UID" Default="" Mode="" Description="Container Variable: HOST_UID" Type="Variable" Display="always" Required="false" Mask="false">99</Config>
   <Config Name="GID" Target="HOST_GID" Default="" Mode="" Description="Container Variable: HOST_GID" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
