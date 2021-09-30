@@ -11,7 +11,7 @@
   <Project>https://github.com/bbilly1/tubearchivist</Project>
   <Overview>Your self hosted YouTube media server.&#xD;
 &#xD;
-IMPORTANT: This container relies on ElasticSearch as well as redisJson.&#xD;
+IMPORTANT: This container relies on ElasticSearch as well as RedisJson.&#xD;
 &#xD;
 Below are screenshots to set up those contains, thanks to u/TheUnchainedZebra on Reddit&#xD;
 &#xD;
@@ -26,12 +26,12 @@ https://i.imgur.com/LjsfhKL.png</Overview>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1632502797</DateInstalled>
+  <DateInstalled>1633016689</DateInstalled>
   <DonateText>Buy the creator a beer!</DonateText>
   <DonateLink>paypal.me/bbilly1</DonateLink>
   <Description>Your self hosted YouTube media server.&#xD;
 &#xD;
-IMPORTANT: This container relies on ElasticSearch as well as redisJson.&#xD;
+IMPORTANT: This container relies on ElasticSearch as well as RedisJson.&#xD;
 &#xD;
 Below are screenshots to set up those contains, thanks to u/TheUnchainedZebra on Reddit&#xD;
 &#xD;
@@ -51,7 +51,7 @@ https://i.imgur.com/LjsfhKL.png</Description>
   </Networking>
   <Data>
     <Volume>
-      <HostDir>VIDEO SAVE LOCATION</HostDir>
+      <HostDir>/mnt/user/Root/video/youtube/</HostDir>
       <ContainerDir>/youtube</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
@@ -63,12 +63,12 @@ https://i.imgur.com/LjsfhKL.png</Description>
   </Data>
   <Environment>
     <Variable>
-      <Value>IP:9200</Value>
+      <Value>http://192.168.1.16:9200</Value>
       <Name>ES_URL</Name>
       <Mode/>
     </Variable>
     <Variable>
-      <Value>IP</Value>
+      <Value>192.168.1.16</Value>
       <Name>REDIS_HOST</Name>
       <Mode/>
     </Variable>
@@ -82,13 +82,19 @@ https://i.imgur.com/LjsfhKL.png</Description>
       <Name>HOST_GID</Name>
       <Mode/>
     </Variable>
+    <Variable>
+      <Value/>
+      <Name>REDIS_PORT</Name>
+      <Mode/>
+    </Variable>
   </Environment>
   <Labels/>
   <Config Name="Host Port 1" Target="8000" Default="" Mode="tcp" Description="Container Port: 8000" Type="Port" Display="always" Required="false" Mask="false">8000</Config>
-  <Config Name="Youtube" Target="/youtube" Default="/youtube" Mode="rw" Description="Container Path: /youtube" Type="Path" Display="always" Required="false" Mask="false">VIDEO SAVE LOCATION</Config>
+  <Config Name="Youtube" Target="/youtube" Default="/youtube" Mode="rw" Description="Container Path: /youtube" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/Root/video/youtube/</Config>
   <Config Name="appdata" Target="/cache" Default="/cache" Mode="rw" Description="Container Path: /cache" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/TubeArchivist/</Config>
-  <Config Name="ElasticSearch" Target="ES_URL" Default="" Mode="" Description="Container Variable: ES_URL" Type="Variable" Display="always" Required="false" Mask="false">http://IP:9200</Config>
-  <Config Name="Rejson" Target="REDIS_HOST" Default="" Mode="" Description="Container Variable: REDIS_HOST" Type="Variable" Display="always" Required="false" Mask="false">IP</Config>
+  <Config Name="ElasticSearch" Target="ES_URL" Default="" Mode="" Description="Container Variable: ES_URL" Type="Variable" Display="always" Required="false" Mask="false">http://192.168.1.16:9200</Config>
+  <Config Name="Redis" Target="REDIS_HOST" Default="" Mode="" Description="Container Variable: REDIS_HOST" Type="Variable" Display="always" Required="false" Mask="false">192.168.1.16</Config>
   <Config Name="UID" Target="HOST_UID" Default="" Mode="" Description="Container Variable: HOST_UID" Type="Variable" Display="always" Required="false" Mask="false">99</Config>
   <Config Name="GID" Target="HOST_GID" Default="" Mode="" Description="Container Variable: HOST_GID" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
+  <Config Name="Redis Port (Optional)" Target="REDIS_PORT" Default="" Mode="" Description="Container Variable: REDIS_PORT" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
 </Container>
