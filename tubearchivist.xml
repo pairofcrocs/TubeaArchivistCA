@@ -13,10 +13,9 @@
 &#xD;
 IMPORTANT: This container relies on ElasticSearch as well as RedisJson.&#xD;
 &#xD;
-Below are screenshots to set up those contains, thanks to u/TheUnchainedZebra on Reddit&#xD;
+Install "TubeArchivist-ES" as well as "TubeArchivist-RedisJSON" BEFORE running "TubeArchivist".&#xD;
 &#xD;
-CREATE THESE BEFORE INSTALLING TUBEARCHIVIST&#xD;
-&#xD;
+Both can be found in the Community Applications.&#xD;
 https://i.imgur.com/thdiJAZ.png&#xD;
 https://i.imgur.com/LjsfhKL.png</Overview>
   <Category>Downloaders:</Category>
