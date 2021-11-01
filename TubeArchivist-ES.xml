@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>TubeArchivist-ES</Name>
-  <Repository>docker.elastic.co/elasticsearch/elasticsearch:7.15.1</Repository>
+  <Repository>docker.elastic.co/elasticsearch/elasticsearch:7.14.1</Repository>
   <Registry>https://hub.docker.com/_/elasticsearch</Registry>
   <Network>bridge</Network>
   <MyIP/>
@@ -21,7 +21,7 @@ Install this and "TubeArchivist-RedisJSON" before trying to run "TubeArchivist"&
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1634503450</DateInstalled>
+  <DateInstalled>1635776511</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Description>This is a dependancy container for the application "TubeArchivist"&#xD;
@@ -48,8 +48,13 @@ Install this and "TubeArchivist-RedisJSON" before trying to run "TubeArchivist"&
   </Data>
   <Environment>
     <Variable>
-      <Value>single-node</Value>
-      <Name>discovery.type</Name>
+      <Value>verysecret</Value>
+      <Name>ELASTIC_PASSWORD</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>true</Value>
+      <Name>xpack.security.enabled</Name>
       <Mode/>
     </Variable>
     <Variable>
@@ -57,10 +62,17 @@ Install this and "TubeArchivist-RedisJSON" before trying to run "TubeArchivist"&
       <Name>ES_JAVA_OPTS</Name>
       <Mode/>
     </Variable>
+    <Variable>
+      <Value>single-node</Value>
+      <Name>discovery.type</Name>
+      <Mode/>
+    </Variable>
   </Environment>
   <Labels/>
   <Config Name="9200" Target="9200" Default="" Mode="tcp" Description="Container Port: 9200" Type="Port" Display="always" Required="false" Mask="false">9200</Config>
-  <Config Name="Discovery Type" Target="discovery.type" Default="" Mode="" Description="Container Variable: discovery.type" Type="Variable" Display="always" Required="false" Mask="false">single-node</Config>
-  <Config Name="Java Options" Target="ES_JAVA_OPTS" Default="" Mode="" Description="Container Variable: ES_JAVA_OPTS" Type="Variable" Display="always" Required="false" Mask="false">-Xms512m -Xmx512m</Config>
   <Config Name="ElasticSearch Data" Target="/data" Default="" Mode="rw" Description="Container Path: /data" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/TubeArchivist/es</Config>
+  <Config Name="ElasticSearch Password" Target="ELASTIC_PASSWORD" Default="" Mode="" Description="Container Variable: ELASTIC_PASSWORD" Type="Variable" Display="always" Required="false" Mask="false">verysecret</Config>
+  <Config Name="Xpack Security" Target="xpack.security.enabled" Default="" Mode="" Description="Container Variable: xpack.security.enabled" Type="Variable" Display="always-hide" Required="false" Mask="false">true</Config>
+  <Config Name="Java Options" Target="ES_JAVA_OPTS" Default="" Mode="" Description="Container Variable: ES_JAVA_OPTS" Type="Variable" Display="always-hide" Required="false" Mask="false">-Xms512m -Xmx512m</Config>
+  <Config Name="Discovery Type" Target="discovery.type" Default="" Mode="" Description="Container Variable: discovery.type" Type="Variable" Display="always-hide" Required="false" Mask="false">single-node</Config>
 </Container>
