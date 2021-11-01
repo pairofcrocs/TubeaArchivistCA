@@ -47,7 +47,7 @@ Both can be found in the Community Applications.&#xD;
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/Root/video/youtube/</HostDir>
+      <HostDir>/mnt/</HostDir>
       <ContainerDir>/youtube</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
@@ -59,12 +59,12 @@ Both can be found in the Community Applications.&#xD;
   </Data>
   <Environment>
     <Variable>
-      <Value>http://192.168.1.16:9200</Value>
+      <Value>http://IP:9200</Value>
       <Name>ES_URL</Name>
       <Mode/>
     </Variable>
     <Variable>
-      <Value>192.168.1.16</Value>
+      <Value>IP</Value>
       <Name>REDIS_HOST</Name>
       <Mode/>
     </Variable>
