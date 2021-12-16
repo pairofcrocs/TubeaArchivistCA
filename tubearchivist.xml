@@ -100,7 +100,7 @@ Both can be found in the Community Applications.&#xD;
     </Variable>
   </Environment>
   <Labels/>
-  <Config Name="Host Port 1" Target="8000" Default="" Mode="tcp" Description="Container Port: 8000" Type="Port" Display="always" Required="false" Mask="false">8000</Config>
+  <Config Name="Port" Target="8000" Default="" Mode="tcp" Description="Container Port: 8000" Type="Port" Display="always" Required="false" Mask="false">8000</Config>
   <Config Name="Youtube Media Path" Target="/youtube" Default="/youtube" Mode="rw" Description="Container Path: /youtube" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/</Config>
   <Config Name="Appdata" Target="/cache" Default="/cache" Mode="rw" Description="Container Path: /cache" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/TubeArchivist/</Config>
   <Config Name="TA Username" Target="TA_USERNAME" Default="" Mode="" Description="Container Variable: TA_USERNAME" Type="Variable" Display="always" Required="false" Mask="false">tubearchivist</Config>
