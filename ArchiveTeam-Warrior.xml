@@ -7,7 +7,7 @@
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support>https://hub.docker.com/r/archiveteam/warrior-dockerfile/</Support>
+  <Support>https://forums.unraid.net/topic/117372-support-crocs-archiveteam-warrior/</Support>
   <Project>https://wiki.archiveteam.org/index.php/ArchiveTeam_Warrior</Project>
   <Overview>The Archive Team Warrior is a virtual archiving appliance. You can run it to help with the Archive Team archiving efforts. It will download sites and upload them to our archive&#x2014;and it&#x2019;s really easy to do!&#xD;
 &#xD;
@@ -19,7 +19,7 @@ Maintained by: Crocs</Overview>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1639690966</DateInstalled>
+  <DateInstalled>1639691585</DateInstalled>
   <DonateText>Please Support the Internet Archive!</DonateText>
   <DonateLink>https://archive.org/donate/</DonateLink>
   <Description>The Archive Team Warrior is a virtual archiving appliance. You can run it to help with the Archive Team archiving efforts. It will download sites and upload them to our archive&#x2014;and it&#x2019;s really easy to do!&#xD;
