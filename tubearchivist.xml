@@ -24,7 +24,7 @@ Both can be found in the Community Applications.&#xD;
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1635776030</DateInstalled>
+  <DateInstalled>1639686981</DateInstalled>
   <DonateText>Buy the creator a beer!</DonateText>
   <DonateLink>paypal.me/bbilly1</DonateLink>
   <Description>Your self hosted YouTube media server.&#xD;
@@ -47,7 +47,7 @@ Both can be found in the Community Applications.&#xD;
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/</HostDir>
+      <HostDir>/mnt/user/</HostDir>
       <ContainerDir>/youtube</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
@@ -69,16 +69,6 @@ Both can be found in the Community Applications.&#xD;
       <Mode/>
     </Variable>
     <Variable>
-      <Value>1000</Value>
-      <Name>HOST_UID</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value>1000</Value>
-      <Name>HOST_GID</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
       <Value>tubearchivist</Value>
       <Name>TA_USERNAME</Name>
       <Mode/>
@@ -93,16 +83,32 @@ Both can be found in the Community Applications.&#xD;
       <Name>ELASTIC_PASSWORD</Name>
       <Mode/>
     </Variable>
+    <Variable>
+      <Value>America/New_York</Value>
+      <Name>TZ</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>1000</Value>
+      <Name>HOST_GID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>1000</Value>
+      <Name>HOST_UID</Name>
+      <Mode/>
+    </Variable>
   </Environment>
   <Labels/>
   <Config Name="Host Port 1" Target="8000" Default="" Mode="tcp" Description="Container Port: 8000" Type="Port" Display="always" Required="false" Mask="false">8000</Config>
-  <Config Name="Youtube" Target="/youtube" Default="/youtube" Mode="rw" Description="Container Path: /youtube" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/Root/video/youtube/</Config>
-  <Config Name="appdata" Target="/cache" Default="/cache" Mode="rw" Description="Container Path: /cache" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/TubeArchivist/</Config>
-  <Config Name="ElasticSearch" Target="ES_URL" Default="" Mode="" Description="Container Variable: ES_URL" Type="Variable" Display="always" Required="false" Mask="false">http://192.168.1.16:9200</Config>
-  <Config Name="Redis" Target="REDIS_HOST" Default="" Mode="" Description="Container Variable: REDIS_HOST" Type="Variable" Display="always" Required="false" Mask="false">192.168.1.16</Config>
-  <Config Name="Username" Target="TA_USERNAME" Default="" Mode="" Description="Container Variable: TA_USERNAME" Type="Variable" Display="always" Required="false" Mask="false">tubearchivist</Config>
-  <Config Name="Password" Target="TA_PASSWORD" Default="" Mode="" Description="Container Variable: TA_PASSWORD" Type="Variable" Display="always" Required="false" Mask="false">verysecret</Config>
-  <Config Name="ElasticSearch Password" Target="ELASTIC_PASSWORD" Default="" Mode="" Description="Container Variable: ELASTIC_PASSWORD" Type="Variable" Display="always" Required="false" Mask="false">verysecret</Config>
-  <Config Name="UID" Target="HOST_UID" Default="" Mode="" Description="Container Variable: HOST_UID" Type="Variable" Display="always" Required="false" Mask="false">1000</Config>
-  <Config Name="GID" Target="HOST_GID" Default="" Mode="" Description="Container Variable: HOST_GID" Type="Variable" Display="always" Required="false" Mask="false">1000</Config>
+  <Config Name="Youtube Media Path" Target="/youtube" Default="/youtube" Mode="rw" Description="Container Path: /youtube" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/</Config>
+  <Config Name="Appdata" Target="/cache" Default="/cache" Mode="rw" Description="Container Path: /cache" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/TubeArchivist/</Config>
+  <Config Name="TA Username" Target="TA_USERNAME" Default="" Mode="" Description="Container Variable: TA_USERNAME" Type="Variable" Display="always" Required="false" Mask="false">tubearchivist</Config>
+  <Config Name="TA Password" Target="TA_PASSWORD" Default="" Mode="" Description="Container Variable: TA_PASSWORD" Type="Variable" Display="always" Required="false" Mask="true">verysecret</Config>
+  <Config Name="Redis" Target="REDIS_HOST" Default="" Mode="" Description="Container Variable: REDIS_HOST" Type="Variable" Display="always" Required="false" Mask="false">IP</Config>
+  <Config Name="ElasticSearch Password" Target="ELASTIC_PASSWORD" Default="" Mode="" Description="Container Variable: ELASTIC_PASSWORD" Type="Variable" Display="always" Required="false" Mask="true">verysecret</Config>
+  <Config Name="ElasticSearch" Target="ES_URL" Default="" Mode="" Description="Container Variable: ES_URL" Type="Variable" Display="always" Required="false" Mask="false">http://IP:9200</Config>
+  <Config Name="Time Zone" Target="TZ" Default="America/New_York" Mode="" Description="Container Variable: TZ" Type="Variable" Display="always" Required="false" Mask="false">America/New_York</Config>
+  <Config Name="GID" Target="HOST_GID" Default="" Mode="" Description="Container Variable: HOST_GID" Type="Variable" Display="advanced" Required="false" Mask="false">1000</Config>
+  <Config Name="UID" Target="HOST_UID" Default="" Mode="" Description="Container Variable: HOST_UID" Type="Variable" Display="advanced" Required="false" Mask="false">1000</Config>
 </Container>
