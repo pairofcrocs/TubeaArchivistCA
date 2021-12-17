@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>ArchiveTeam-Warrior</Name>
-  <Repository>archiveteam/warrior-dockerfile</Repository>
+  <Repository>atdr.meo.ws/archiveteam/warrior-dockerfile:latest</Repository>
   <Registry>https://hub.docker.com/r/archiveteam/warrior-dockerfile/</Registry>
   <Network>bridge</Network>
   <MyIP/>
