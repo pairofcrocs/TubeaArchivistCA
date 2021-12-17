@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>TubeArchivist-ES</Name>
-  <Repository>docker.elastic.co/elasticsearch/elasticsearch:7.14.1</Repository>
+  <Repository>docker.elastic.co/elasticsearch/elasticsearch:7.16.1</Repository>
   <Registry>https://hub.docker.com/_/elasticsearch</Registry>
   <Network>bridge</Network>
   <MyIP/>
