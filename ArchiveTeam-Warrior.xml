@@ -37,7 +37,7 @@ Maintained by: Crocs</Description>
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/appdata/warrior/</HostDir>
+      <HostDir>/var/run/docker.sock</HostDir>
       <ContainerDir>/var/run/docker.sock</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
@@ -45,5 +45,5 @@ Maintained by: Crocs</Description>
   <Environment/>
   <Labels/>
   <Config Name="Port" Target="8001" Default="8001" Mode="tcp" Description="Container Port: 8001" Type="Port" Display="always" Required="false" Mask="false">8001</Config>
-  <Config Name="Appdata" Target="/var/run/docker.sock" Default="" Mode="rw" Description="Container Path: /var/run/docker.sock" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/warrior/</Config>
+  <Config Name="Appdata" Target="/var/run/docker.sock" Default="" Mode="rw" Description="Container Path: /var/run/docker.sock" Type="Path" Display="always" Required="false" Mask="false">/var/run/docker.sock</Config>
 </Container>
